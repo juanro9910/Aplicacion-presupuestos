@@ -1,9 +1,9 @@
 class Ingreso extends Dato {
-    static contradorIngreso = 0;
+    static contadorIngreso = 0;
 
     constructor(descripcion, valor) {
         super(descripcion, valor);
-        this._id = ++Ingreso.contradorEgreso;
+        this._id = ++Ingreso.contadorEgreso;
     }
     get id() {
         return this._id;

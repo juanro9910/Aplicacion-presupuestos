@@ -5,7 +5,7 @@ const ingresos = [
 
 const egresos = [
     new Egreso('Renta departamento', 900),
-    new Egreso('Ropa', 400)
+    new Egreso('Ropa', 600)
 ];
 
 let cargaApp = () => {
@@ -30,10 +30,10 @@ let totalEgresos = () => {
 
 let cargarCabecero = () => {
     let presupuesto = totalIngresos() - totalEgresos();
-    let porcentajeEgreso = totalEgresos() / totalIngresos();
+    let porcentajeEgreso = totalEgresos()/totalIngresos();
     document.getElementById('presupuesto').innerHTML = formatoMoneda(presupuesto);
     document.getElementById('porcentaje').innerHTML = formatoPorcentaje(porcentajeEgreso);
-    document.getElementById('ingresos').innerHTML = formatoMoneda(totalIngreso());
+    document.getElementById('ingresos').innerHTML = formatoMoneda(totalIngresos());
     document.getElementById('egresos').innerHTML = formatoMoneda(totalEgresos());
 }
 
@@ -53,8 +53,8 @@ const cargarIngresos = () => {
 }
 
 const crearIngresosHTML = (ingreso) => {
-    let ingresoHTML = `
-    div class="elemento limpiarEstilos">
+    let ingresoHTML = 
+    `<div class="elemento limpiarEstilos">
     <div class="elemento_descipcion">${ingreso.descripcion}</div>
     <div class="derecha limpiarEstilos">
         <div class="elemento_valor">+ ${formatoMoneda(ingreso.valor)}</div>
