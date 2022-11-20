@@ -4,11 +4,11 @@ const ingresos = [
 ];
 
 const egresos = [
-    new Egreso('Renta departamento', 900),
+    new Egreso('Renta departamento', 1000),
     new Egreso('Ropa', 600)
 ];
 
-let cargaApp = () => {
+let cargarApp = () => {
     cargarCabecero();
 }
 
@@ -30,7 +30,7 @@ let totalEgresos = () => {
 
 let cargarCabecero = () => {
     let presupuesto = totalIngresos() - totalEgresos();
-    let porcentajeEgreso = totalEgresos()/totalIngresos();
+    let porcentajeEgreso = totalEgresos() / totalIngresos();
     document.getElementById('presupuesto').innerHTML = formatoMoneda(presupuesto);
     document.getElementById('porcentaje').innerHTML = formatoPorcentaje(porcentajeEgreso);
     document.getElementById('ingresos').innerHTML = formatoMoneda(totalIngresos());
@@ -53,18 +53,18 @@ const cargarIngresos = () => {
 }
 
 const crearIngresosHTML = (ingreso) => {
-    let ingresoHTML = 
-    `<div class="elemento limpiarEstilos">
-    <div class="elemento_descipcion">${ingreso.descripcion}</div>
+    let ingresoHTML =`
+    <div class="elemento limpiarEstilos">
+    <div class="elemento_descripcion">${ingreso.descripcion}</div>
     <div class="derecha limpiarEstilos">
         <div class="elemento_valor">+ ${formatoMoneda(ingreso.valor)}</div>
         <div class="elemento_eliminar">
-                <button class="elemento_eliminar--btn">
+            <button class='elemento_eliminar--btn'>
                     <ion-icon name="close-circle-outline"></ion-icon>
-                </button>
+            </button>
         </div>
-         </div>
     </div>
+</div>
     `;
     return ingresoHTML;
 }
