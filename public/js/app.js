@@ -1,11 +1,9 @@
 const ingresos = [
-    new Ingreso('salario', 2100.00),
-    new Ingreso('Venta coche', 1500)
+   
 ];
 
 const egresos = [
-    new Egreso('Renta departamento', 1000),
-    new Egreso('Ropa', 600)
+    
 ];
 
 let cargarApp = () => {
@@ -73,8 +71,8 @@ const crearIngresosHTML = (ingreso) => {
 const eliminarIngreso = (id) => {
     let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id === id);
     ingresos.splice(indiceEliminar, 1);
-    cargarCabecero;
-    cargarIngresos;
+    cargarCabecero();
+    cargarIngresos();
 }
 //cargar ingresos final
 
@@ -109,8 +107,8 @@ const crearEgresosHTML = (egreso) => {
 let eliminarEgreso = (id) => {
     let indiceEliminar = egresos.findIndex(egreso => egreso.id === id);
     egresos.splice(indiceEliminar, 1);
-    cargarCabecero;
-    cargarEgresos;
+    cargarCabecero();
+    cargarEgresos();
 }
 
 let agregarDato = () => {
