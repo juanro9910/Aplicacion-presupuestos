@@ -1,0 +1,24 @@
+{
+  "name": "aplicacion-presupuestos",
+  "version": "1.0.0",
+  "description": "Firebase",
+  "main": "conexionBD.js",
+  "dependencies": {
+    "firebase-tools": "^11.25.1",
+    "mysql": "github:mysqljs/mysql"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanro9910/Aplicacion-presupuestos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanro9910/Aplicacion-presupuestos/issues"
+  },
+  "homepage": "https://github.com/juanro9910/Aplicacion-presupuestos#readme"
+}
