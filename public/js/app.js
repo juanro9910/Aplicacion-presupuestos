@@ -1,10 +1,18 @@
-const ingresos = [
-   
-];
 
-const egresos = [
-    
-];
+var mysql = require('mysql')
+var connection = mysql.createConnection({
+    host: '132.145.213.95',
+    user: 'root',
+    password: 'N*pxv5Qdn2JTgrx3',
+    database: 'siebase'
+});
+
+document.addEventListener('DOMContentLoaded', async() => {
+    cargarApp(), cargarIngresos(), cargarEgresos();
+});
+
+const ingresos = [];
+const egresos = [];
 
 let cargarApp = () => {
     cargarCabecero();
